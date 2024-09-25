@@ -1,0 +1,380 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav ul li button:hover {
+    background-color: #ddd;
+}
+
+#presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    padding: 20px;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+}
+
+#presentation h2 {
+    font-size: 2.5em;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+#presentation p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+#presentation strong {
+    color: #ff6600;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #5d9c70;
+}
+
+form button {
+    align-self: center;
+    width: 50%;
+}
+
+#updateForm {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#updateForm h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#updateForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#updateForm input[type="text"],
+#updateForm input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#updateForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#updateForm button:hover {
+    background-color: #45a049;
+}
+
+#containerUsers {
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.usersTable thead th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.usersTable tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.usersTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.usersTable td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.usersTable button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.usersTable button:hover {
+    opacity: 0.8;
+}
+
+#formRecette {
+    background-color: #fcfcfc;
+    padding: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#formRecette h2 {
+    color: #4CAF50;
+}
+
+#formRecette form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formRecette form input[type="text"],
+#formRecette form input[type="number"],
+#formRecette form input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#recetteContainer {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#containerRecette .recette {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#containerRecette .recette p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#containerRecette .recette #titreRecette {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#containerRecette .recette #pics img {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#containerRecette .recette button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#containerRecette .recette button:hover {
+    background-color: #4CAF50;
+}
+
+#containerRecette .recette #updateBtn {
+    background-color: #2196F3;
+    margin-left: 10px;
+}
+
+#containerRecette .recette #updateBtn:hover {
+    background-color: #1976D2;
+}
+
+footer {
+    background-color: #4CAF50;
+}
+footer p{ 
+    color : white;
+    margin-left: 30px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    #presentation {
+        display: flex;
+        max-height: 50%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+    #formRecette {
+        width: 280px;
+        margin-right: 45px;
+        max-height: 640px;
+    }
+
+    .timer {
+        flex-direction: column;
+    }
+
+    #addPicture #picture {
+        width: 128px;
+    }
+
+    #formConnexion, #formInscription {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 70px;
+    }
+
+    .section {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

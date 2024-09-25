@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/imgs/cuisine.png" type="icon cuisine">
+    <title>Recette</title>
+</head>
+
+<body>
+    <header>
+        <h1>Les meilleurs recette de cuisine</h1>
+        <div>
+            <input class="section hidden" id="barreRecherche" type="text" name="title" placeholder="Rechercher un plat">
+        </div>
+        <nav>
+            <ul>
+                <li id="btn-users" class="hidden"><button  onclick="displayUsers()">Utilisateurs</button></li>
+                <li id="btn-recette"><button>Mes recettes</button></li>
+                <li id="btn-seeRecette"><button onclick="displayRecette()">Nos recettes</button> </li>
+                <li id="btn-addRecette"><button>Ajouter une recette</button></li>
+                <li id="btn-connexion"><button>Connexion</button></li>
+                <li id="btn-inscription"><button>Inscription</button></li>
+                <li id="btn-deconnexion"><button>Deconnexion</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="presentation" class="section">
+            <h2>Bienvenue sur <strong>Les Meilleures Recettes de Cuisine</strong> !</h2>
+            <p>
+                Que vous soyez un cuisinier amateur ou un chef chevronné, <strong>Les Meilleures Recettes de
+                    Cuisine</strong>
+                est votre espace dédié à la découverte et au partage de recettes. Ce site a pour but de créer une
+                véritable
+                communauté de passionnés de cuisine où chacun peut ajouter, consulter et partager ses meilleures
+                créations culinaires.
+            </p>
+            <p>
+                Sur notre plateforme, vous trouverez des recettes variées pour tous les goûts, des plats traditionnels
+                aux créations
+                plus modernes. Chaque recette est accompagnée de conseils pratiques sur les ingrédients, les étapes de
+                préparation,
+                et même des photos pour illustrer vos chefs-d'œuvre !
+            </p>
+            <p>
+                Vous avez une recette à partager ? C'est simple ! Il vous suffit de cliquer sur <strong>Ajouter une
+                    recette</strong>,
+                de renseigner les détails, et de la publier. Que ce soit pour un repas de famille, un dîner entre amis
+                ou un simple
+                plat rapide, toutes les idées sont les bienvenues.
+            </p>
+            <p>
+                Rejoignez-nous pour rendre la cuisine encore plus amusante et accessible à tous. Explorez de nouvelles
+                saveurs, testez
+                des idées innovantes, et surtout, régalez-vous !
+            </p>
+            <p><strong>Bon appétit !</strong></p>
+        </section>
+
+        <section id="formInscription" class="section hidden">
+            <h2>Inscription</h2>
+            <p id="err"></p>
+            <form id="registerForm" onsubmit="event.preventDefault(); addUser();">
+                <label>Nom d'utilisateur</label>
+                <input id="username" type="text" required>
+                
+                <label>Email</label>
+                <input id="email" type="email" required>
+                
+                <label>Mot de passe</label>
+                <input id="password" type="password" required>
+                
+                <label>Confirmer le mot de passe</label>
+                <input id="confirmPassword" type="password" required>
+                
+                <button type="submit" class="btn-save">S'inscrire</button>
+                <p id="error" style="color: red;"></p> 
+            </form>
+            
+        </section>
+
+        <section id="formConnexion" class="section hidden">
+            <h2>Connexion</h2>
+            <p id="err"></p>
+            <form action="">
+                <label>username</label>
+                <input id="co-username" type="text">
+                <label>mot de passe</label>
+                <input id="co-password" type="password">
+                <button type="button" class="btn-save" onclick="connexionUser()">Se connecter</button>
+            </form>
+        </section>
+
+        <section id="formRecette" class="section hidden">
+            <h2>Ajouter une recettes</h2>
+            <p id="err"></p>
+            <form action="">
+                <div class="input-container">
+                    <div id="researchForm">
+                        <label>Titre de la recette</label>
+                        <input id="title" type="text">
+                        <label>Ingredient</label>
+                        <input id="ingredient" type="text">
+                        <label>Instruction de preparation</label>
+                        <input id="instruction" type="text">
+                        <div class="timer">
+
+                            <label>Temps de preparation</label>
+                            <input id="timePreparation" type="number">
+                            <label>Temps de cuisson</label>
+                            <input id="timeCuisson" type="number" >
+                        </div>
+                        <div>
+                            <label>Difficulté</label>
+                            <input id="difficulte" type="text" >
+                        </div>
+                        <label>Catégorie</label>
+                        <input id="categorie" type="text">
+                        <div id="addPicture">
+                            <label>Ajouter une photo</label>
+                            <input id="picture" type="file" />
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-save" onclick="addRecette()">Ajouter la recette</button>
+            </form>
+        </section>
+
+        <section id="usersContainer" class="section hidden">
+            <div id="containerUsers"></div>
+            <div id="containerForm" ></div>
+        </section>
+      
+        <section id="recetteContainer" class="section hidden">
+            <div id="containerRecette"></div>
+        </section>
+
+    </main>
+    <footer>
+        <p>copyright</p>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
